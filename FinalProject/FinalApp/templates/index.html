@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--     <link rel="stylesheet" href="styles.css">-->
+    <title>Title</title>
+</head>
+<style>
+    body {
+     background: url("/static/frontimg.png") no-repeat center center fixed;
+     -webkit-background-size:cover;
+     -moz--background-size:cover;
+     -o--background-size:cover;
+     background-size: cover;
+
+}
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 78%;
+    margin-top: 17%;
+}
+</style>
+<body>
+<!--<a href="getPredictions()">-->
+<!--    <button>Click me</button>-->
+<!--</a>-->
+<!--<button type="submit" name='mybtn2' value={{'finalProj latest.py'}}>Click me</button>-->
+<!--&lt;!&ndash;<button  type="button">Click Me!</button>&ndash;&gt;-->
+<!--<form method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <button type="submit" name="run_script">Run script</button>-->
+<!--</form>-->
+
+<form method="post" action="{% url 'getPredictions' %}">
+     {% csrf_token %}
+     <button class="btn btn-danger btn-block btn-round">Perform task</button>
+</form>
+</body>
+</html>
